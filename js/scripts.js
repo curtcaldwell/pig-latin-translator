@@ -1,5 +1,14 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
+
+    var answers = ["person1", "person2", "animal", "exclamation", "verb", "noun", "guy"];
+
+    answers.forEach(function(answer) {
+      var userInput = $("input#" + answer).val();
+      $("." + answer).text(userInput);
+    });
+
+/*
     var person1Input = $("input#person1").val();
     var person2Input = $("input#person2").val();
     var animalInput= $("input#animal").val();
@@ -13,6 +22,7 @@ $(document).ready(function() {
     $(".exclamation").text(exclamationInput);
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
+*/
 
     $("#story").show();
 
